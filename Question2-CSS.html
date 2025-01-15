@@ -9,12 +9,30 @@
       outline: none;
     }
 
+    /* Add focus styles for accessibility */
+    .mainsection a:focus {
+      background-color: #e0e0e0;
+      color: #000;
+      outline: 2px solid #007acc;
+    }
+
+    /* Add a hover effect for links to improve visual feedback */
+    .mainsection a:hover {
+      color: #007acc;
+    }
+
+    /* Add a description for the image */
+    .mainsection img {
+      display: block;  /* Ensure image does not have extra space below */
+      width: 100%;     /* Ensure image fits container */
+      height: auto;    /* Maintain aspect ratio */
+    }
     
-    </style>
+   </style>
 </head>
 <body>
 <div class="mainsection">
-<h1><img src="lab2/lab2-imageoftext.gif" alt="Shopping categories"></h1>
+<h1><img src="lab2/lab2-imageoftext.gif" alt="Shopping categories: Animals, Computers, Diversity and inclusion, Food, Medicine, Music"></h1>
 
 <ul>
   <li><a href="#">Animals</a></li>
