@@ -7,15 +7,22 @@
 
 <body>
     <h1>HTML DOM Events</h1>
-    <p>Trigger a function on hover or focus that will output "Hello World":</p>
+    <p>Trigger a function on hover, focus, or keyboard action that will output "Hello World":</p>
 
-    <!-- Added onfocus for keyboard accessibility -->
-    <button onmouseover="myFunction()" onfocus="myFunction()">Action!</button>
+    <!-- Added onkeydown for keyboard accessibility -->
+    <button onmouseover="myFunction()" onfocus="myFunction()" onclick="myFunction()" onkeydown="handleKey(event)">Action!</button>
     <p id="demo"></p>
 </body>
 <script>
     function myFunction() {
         document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    function handleKey(event) {
+        // Check for Enter (key code 13) or Space (key code 32)
+        if (event.key === "Enter" || event.key === " ") {
+            myFunction();
+        }
     }
 </script>
 
